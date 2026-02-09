@@ -1,0 +1,23 @@
+name: "Weather Forecast"
+description: "Exposa la predicció del temps per a un municipi definit per l'usuari mitjançant l'API de Meteocat."
+version: "0.1.0"
+slug: "weather_forecast"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  8099/tcp: 8099
+options:
+  municipality: "Barcelona"
+  municipality_code: null
+  api_key: null
+  base_url: "https://api.meteo.cat/recursos/v1"
+schema:
+  municipality: "str"
+  municipality_code: "str?"
+  api_key: "password?"
+  base_url: "str"
